@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .register{
+            text-align: center;
+            margin: 15%;
+            
+        }
+
+        form > fieldset{
+            padding: 10%;
+            border-radius: 15px;
+        }
+
+        form > fieldset > label{
+            margin-right: 1rem;
+        }
+
+        form > fieldset > br{
+            margin:5%;
+        }
+    </style>
+</head>
+<body>
+    <form class="register" action="/" method="post">
+        <fieldset>
+            <legend>註冊頁面</legend>
+
+            <div class="inputGroup">
+                <label>
+                    姓名
+                    <input type="text">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    密碼
+                    <input type="password">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    信箱
+                    <input type="email">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    電話
+                    <input type="tel">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    數字
+                    <input type="number">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    網址
+                    <input type="url">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    區間
+                    <input type="range">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    色彩
+                    <input type="color">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    生日
+                    <input type="date">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    時間
+                    <input type="time">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    檔案
+                    <input type="file">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    搜尋
+                    <input type="search">
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    性別
+                    <input type="radio" name="gender">男
+                    <input type="radio" name="gender">女
+                    <input type="radio" name="gender">多元性別
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    性別
+                    <input type="checkbox" name="music">聽音樂
+                    <input type="checkbox" name="movie">看電影
+                    <input type="checkbox" name="game">打電動
+                </label>
+            </div>
+            <br>
+            <div class="inputGroup">
+                <label>
+                    備註
+                    <textarea name="ps" id="ps" cols="30" rows="10"></textarea>
+                </label>
+            </div>
+            <br>
+            <button type="submit">登入</button>
+        </fieldset>
+        
+    </form>
+</body>
+</html>
