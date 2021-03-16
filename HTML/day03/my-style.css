@@ -1,0 +1,9 @@
+@import url("reset.css");
+/* @import url("outside.css"); */
+
+h1 {
+    color: blue;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: '微軟正黑體', sans-serif;
+}
