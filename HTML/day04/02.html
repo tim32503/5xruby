@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap{
+            width: 900px;
+            margin: auto;
+        }
+        .item{
+            display: flex;
+            /* flex-wrap: wrap;
+            flex-direction: row; */
+        }
+        .item .pic{
+            width: 50%;
+        }
+        .item .pic img{
+            width: 100%;
+        }
+        .item .content{
+            width: 50%;
+            font-size: 30px;
+            background-color: #CCC;
+        }
+        .item:nth-child(even){
+            flex-direction: row-reverse;
+        }
+        /* .item:nth-of-type(even){
+            flex-direction: row-reverse;
+        } */
+        
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item">
+            <div class="content">眾多強化看了分公司首頁，身邊不說，力量。</div>
+            <div class="pic">
+                <img src="p1.jpg" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">眾多強化看了分公司首頁，身邊不說，力量。</div>
+            <div class="pic">
+                <img src="p1.jpg" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">眾多強化看了分公司首頁，身邊不說，力量。</div>
+            <div class="pic">
+                <img src="p1.jpg" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">眾多強化看了分公司首頁，身邊不說，力量。</div>
+            <div class="pic">
+                <img src="p1.jpg" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">眾多強化看了分公司首頁，身邊不說，力量。</div>
+            <div class="pic">
+                <img src="p1.jpg" alt="">
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
