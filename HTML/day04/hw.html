@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/5804dc9206.js" crossorigin="anonymous"></script>
 
     <style>
         *{
@@ -12,29 +13,160 @@
             padding: 0;
             list-style: none;
         }
+        #hide{
+            display: none;
+        }
+        /* Header Style */
+        .header{
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            /* 標題至頂&不會覆蓋下方文字 */
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+        .header .logo{
+            width: 200px;
+            display: flex;
+            margin: 15px;
+        }
+        .header .logo img{
+            width: 40px;
+            height: 24px;
+        }
+        .header .logo h1{
+            width: 150px;
+            font-size: 1rem;
+            margin-left: 10px;
+        }
+        .header nav{
+            display: flex;
+            align-items: center;
+            margin: 15px;
+        }
+        .header nav .nav-item{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        /* Container Style */
         .container{
             width: 100%;
             height: 1000px;
-            background-color: #aaf;
+            /* background-color: #aaf; */
         }
+        .banner{
+            width: 100%;
+            height: 800px;
+            background-image: url(https://picsum.photos/1920/1080/);
+        }
+        .banner-title{
+            margin: auto;
+        }
+
+        /* Footer Style */
         .footer{
             width: 100%;
             height: 500px;
-            background-color: #f0f;
+            background-color: rgba(24,30,45,1);
+        }
+        
+        .footer-sociallink{
+            padding: 100px;
+            
+            /* justify-content: space-between; */
+        }
+        .footer-sociallink a{
+            color: rgba(160,166,177,1);
+        }
+        .footer-sociallink ul > li{
+            display: inline-flex;
+            margin: 0px 10px;
+            margin-inline-start: ;
+            /* justify-content: space-between; */
+        }
+        .footer-copyright{
+            height: 50px;
+            text-align: center;
+            color: rgba(160,166,177,1);
+            /* background-color: #fff; */
         }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgODEuMTMgMzcuMyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzUxMik7fS5jbHMtMntmaWxsOiMxYTFhMWE7fS5jbHMtM3tmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU4MSk7fS5jbHMtNHtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU3Myk7fS5jbHMtNXtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU1OSk7fS5jbHMtNntmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzUxMi0yKTt9PC9zdHlsZT48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81MTIiIHgxPSIyOC42NCIgeTE9Ii0xLjA4IiB4Mj0iNTQuNiIgeTI9IjI0Ljg4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTk1NzUwIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjA5NTgwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81ODEiIHgxPSIyMy45NCIgeTE9IjguNzMiIHgyPSI0NS43MyIgeTI9IjMwLjUyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTczMzJlIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWQ3YzZmIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81NzMiIHgxPSIyOS4zMSIgeTE9IjE0LjQxIiB4Mj0iMjkuMzEiIHkyPSItMC44IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZjE5ZDk2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWI3MDYzIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81NTkiIHgxPSI1MS44NCIgeTE9IjEzLjg2IiB4Mj0iNTEuODQiIHkyPSIwLjY1IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwLjAxIiBzdG9wLWNvbG9yPSIjZjZjMGJkIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWY5MThiIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81MTItMiIgeDE9IjQwLjgyIiB5MT0iMTQuMzQiIHgyPSI1Mi41MyIgeTI9IjI2LjA1IiB4bGluazpocmVmPSIj5pyq5ZG95ZCN5ry45bGkXzUxMiIvPjwvZGVmcz48ZyBpZD0iTE9HT1/oqK3oqIgiIGRhdGEtbmFtZT0iTE9HTyDoqK3oqIgiPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI1Ni43IDAuNTQgNDAuNTcgMC41NCAyNC40NCAwLjU0IDE4LjA1IDEzLjQ0IDQwLjU3IDM3LjI4IDYzLjExIDEzLjQ0IDU2LjcgMC41NCIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTc2LjMzLDExLjQ3VjYuNjRhNi40NSw2LjQ1LDAsMCwwLTEuODYtNC44QTYuODIsNi44MiwwLDAsMCw2OS41OCwwSDY1LjE5VjUuMThINjlhMiwyLDAsMCwxLDIuMTYsMi4xNHY1LjMxYTUuMTksNS4xOSwwLDAsMCwxLjQ2LDMuODgsNy41OSw3LjU5LDAsMCwwLDMuOSwxLjgsNy41MSw3LjUxLDAsMCwwLTMuOSwxLjc5QTUuMjEsNS4yMSwwLDAsMCw3MS4xNywyNFYyOS4zQTIsMiwwLDAsMSw2OSwzMS40M0g2NS4xOXY1LjE2aDQuMzlhNi44Miw2LjgyLDAsMCwwLDQuODktMS44MkE2LjQ1LDYuNDUsMCwwLDAsNzYuMzMsMzBWMjUuMTRjMC0yLjY2LDEuNDItNC4yLDQuNDMtNC4yVjE1LjY3Qzc3Ljc1LDE1LjY3LDc2LjMzLDE0LjE0LDc2LjMzLDExLjQ3WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTEwLDEyLjYzVjcuMzJhMiwyLDAsMCwxLDIuMTYtMi4xNGgzLjgyVjBIMTEuNTZhNi44Myw2LjgzLDAsMCwwLTQuOSwxLjgyLDYuNDUsNi40NSwwLDAsMC0xLjg1LDQuOHY0LjgzYzAsMi42Ny0xLjQzLDQuMi00LjQ0LDQuMnY1LjI3YzMsMCw0LjQ0LDEuNTQsNC40NCw0LjJWMzBhNi40NSw2LjQ1LDAsMCwwLDEuODUsNC44LDYuODMsNi44MywwLDAsMCw0LjksMS44Mmg0LjM4VjMxLjQzSDEyLjEyQTIsMiwwLDAsMSwxMCwyOS4zVjI0QTUuMjEsNS4yMSwwLDAsMCw4LjUsMjAuMWE3LjUxLDcuNTEsMCwwLDAtMy45LTEuNzksNy41OSw3LjU5LDAsMCwwLDMuOS0xLjhBNS4xOSw1LjE5LDAsMCwwLDEwLDEyLjYzWiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIxOC4wNSAxMy40NCA0MC41NyAzNy4yOCA0MC41NyAxMy40NCAxOC4wNSAxMy40NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNCIgcG9pbnRzPSI0MC41NyAwLjU0IDI0LjQ0IDAuNTQgMTguMDUgMTMuNDQgNDAuNTcgMTMuNDQgNDAuNTcgMC41NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNSIgcG9pbnRzPSI2My4xMSAxMy40NCA1Ni43IDAuNTQgNDAuNTcgMC41NCA0MC41NyAxMy40NCA2My4xMSAxMy40NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNiIgcG9pbnRzPSI0MC41NyAxMy40NCA0MC41NyAzNy4yOCA2My4xMSAxMy40NCA0MC41NyAxMy40NCIvPjwvZz48L3N2Zz4=" alt="">
+    <div class="header">
+        <div class="logo">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgODEuMTMgMzcuMyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzUxMik7fS5jbHMtMntmaWxsOiMxYTFhMWE7fS5jbHMtM3tmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU4MSk7fS5jbHMtNHtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU3Myk7fS5jbHMtNXtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU1OSk7fS5jbHMtNntmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzUxMi0yKTt9PC9zdHlsZT48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81MTIiIHgxPSIyOC42NCIgeTE9Ii0xLjA4IiB4Mj0iNTQuNiIgeTI9IjI0Ljg4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTk1NzUwIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjA5NTgwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81ODEiIHgxPSIyMy45NCIgeTE9IjguNzMiIHgyPSI0NS43MyIgeTI9IjMwLjUyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTczMzJlIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWQ3YzZmIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81NzMiIHgxPSIyOS4zMSIgeTE9IjE0LjQxIiB4Mj0iMjkuMzEiIHkyPSItMC44IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZjE5ZDk2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWI3MDYzIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81NTkiIHgxPSI1MS44NCIgeTE9IjEzLjg2IiB4Mj0iNTEuODQiIHkyPSIwLjY1IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwLjAxIiBzdG9wLWNvbG9yPSIjZjZjMGJkIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWY5MThiIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81MTItMiIgeDE9IjQwLjgyIiB5MT0iMTQuMzQiIHgyPSI1Mi41MyIgeTI9IjI2LjA1IiB4bGluazpocmVmPSIj5pyq5ZG95ZCN5ry45bGkXzUxMiIvPjwvZGVmcz48ZyBpZD0iTE9HT1/oqK3oqIgiIGRhdGEtbmFtZT0iTE9HTyDoqK3oqIgiPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI1Ni43IDAuNTQgNDAuNTcgMC41NCAyNC40NCAwLjU0IDE4LjA1IDEzLjQ0IDQwLjU3IDM3LjI4IDYzLjExIDEzLjQ0IDU2LjcgMC41NCIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTc2LjMzLDExLjQ3VjYuNjRhNi40NSw2LjQ1LDAsMCwwLTEuODYtNC44QTYuODIsNi44MiwwLDAsMCw2OS41OCwwSDY1LjE5VjUuMThINjlhMiwyLDAsMCwxLDIuMTYsMi4xNHY1LjMxYTUuMTksNS4xOSwwLDAsMCwxLjQ2LDMuODgsNy41OSw3LjU5LDAsMCwwLDMuOSwxLjgsNy41MSw3LjUxLDAsMCwwLTMuOSwxLjc5QTUuMjEsNS4yMSwwLDAsMCw3MS4xNywyNFYyOS4zQTIsMiwwLDAsMSw2OSwzMS40M0g2NS4xOXY1LjE2aDQuMzlhNi44Miw2LjgyLDAsMCwwLDQuODktMS44MkE2LjQ1LDYuNDUsMCwwLDAsNzYuMzMsMzBWMjUuMTRjMC0yLjY2LDEuNDItNC4yLDQuNDMtNC4yVjE1LjY3Qzc3Ljc1LDE1LjY3LDc2LjMzLDE0LjE0LDc2LjMzLDExLjQ3WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTEwLDEyLjYzVjcuMzJhMiwyLDAsMCwxLDIuMTYtMi4xNGgzLjgyVjBIMTEuNTZhNi44Myw2LjgzLDAsMCwwLTQuOSwxLjgyLDYuNDUsNi40NSwwLDAsMC0xLjg1LDQuOHY0LjgzYzAsMi42Ny0xLjQzLDQuMi00LjQ0LDQuMnY1LjI3YzMsMCw0LjQ0LDEuNTQsNC40NCw0LjJWMzBhNi40NSw2LjQ1LDAsMCwwLDEuODUsNC44LDYuODMsNi44MywwLDAsMCw0LjksMS44Mmg0LjM4VjMxLjQzSDEyLjEyQTIsMiwwLDAsMSwxMCwyOS4zVjI0QTUuMjEsNS4yMSwwLDAsMCw4LjUsMjAuMWE3LjUxLDcuNTEsMCwwLDAtMy45LTEuNzksNy41OSw3LjU5LDAsMCwwLDMuOS0xLjhBNS4xOSw1LjE5LDAsMCwwLDEwLDEyLjYzWiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIxOC4wNSAxMy40NCA0MC41NyAzNy4yOCA0MC41NyAxMy40NCAxOC4wNSAxMy40NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNCIgcG9pbnRzPSI0MC41NyAwLjU0IDI0LjQ0IDAuNTQgMTguMDUgMTMuNDQgNDAuNTcgMTMuNDQgNDAuNTcgMC41NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNSIgcG9pbnRzPSI2My4xMSAxMy40NCA1Ni43IDAuNTQgNDAuNTcgMC41NCA0MC41NyAxMy40NCA2My4xMSAxMy40NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNiIgcG9pbnRzPSI0MC41NyAxMy40NCA0MC41NyAzNy4yOCA2My4xMSAxMy40NCA0MC41NyAxMy40NCIvPjwvZz48L3N2Zz4=">
+            <h1>五倍紅寶石</h1>
+        </div>
+        <nav>
+            <div class="nav-item"><strong>全方位培訓營</strong></div>
+            <div class="nav-item"><strong>ASTRO Camp</strong></div>
+            <div class="nav-item"><strong>線上課程</strong></div>
+            <div class="nav-item"><strong>短期課程</strong></div>
+            <div class="nav-item"><strong>專欄文章</strong></div>
+            <div class="nav-item"><strong>最新消息</strong></div>
+        </nav>
     </div>
 
     <div class="container">
-
+        <section class="banner">
+            <div class="banner-title">
+                <h1>五倍學習，突破你的可能性</h1>
+                <P>掌握實戰經驗，從初心素人到業界接軌，讓專業師資為你重新定義程式教育。</P>
+            </div>
+        </section>
     </div>
 
     <div class="footer">
+        <section class="footer-info">
 
+        </section>
+        <section class="footer-sitemap">
+
+        </section>
+        <section class="footer-sociallink">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-facebook-square fa-3x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-youtube fa-3x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-github fa-3x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-medium-m fa-3x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-line fa-3x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-twitter fa-3x"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+        <div class="footer-copyright">
+            <span>© 2014 - 2021 五倍紅寶石程式資訊教育股份有限公司 (5xRuby Training Group CO., LTD) | 台北市短期補習班立案 第 7594 號</span>
+        </div>
     </div>
 </body>
 </html>
