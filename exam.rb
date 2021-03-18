@@ -16,7 +16,7 @@
 def number_root(n)
     # 實作內容請寫在這裡
     str_number = n.to_s
-    ary_number = str_number.split(//)
+    ary_number = str_number.split(//)   # 轉型別後，用split(//)方法逐字分割存成陣列
 
     if ary_number.length >= 2
 
@@ -50,6 +50,9 @@ def remove_extra_number(list, n)
     ary_result = []
 
     for i in 0..list.length - 1 do
+        # Array方法：
+        # include?() 得知陣列中是否包含該物件
+        # count() 得知陣列中物件個數
         if !ary_result.include?(list[i]) || ary_result.count(list[i]) < n
             ary_result << list[i]
         end
