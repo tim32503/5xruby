@@ -14,21 +14,40 @@
 #        = 1 + 1 = 2
 
 def number_root(n)
-    # 實作內容請寫在這裡
-    str_number = n.to_s
-    ary_number = str_number.split(//)   # 轉型別後，用split(//)方法逐字分割存成陣列
+	# --- 我的解法 ---
+  # str_number = n.to_s
+  # ary_number = str_number.split(//)   # 轉型別後，用split(//)方法逐字分割存成陣列
 
-    if ary_number.length >= 2
+  # if ary_number.length >= 2
 
-        int_result = 0
+  #   int_result = 0
 
-        for i in 0..ary_number.length - 1 do
-            int_result += ary_number[i].to_i
-        end
-        number_root(int_result)
-    else
-        return str_number
-    end
+  #   for i in 0..ary_number.length - 1 do
+  #       int_result += ary_number[i].to_i
+  #   end
+  #   number_root(int_result)
+  # else
+  #   return str_number
+  # end
+
+  # --- 其他解法 1 ---
+	# while n >= 10 do
+	# 	# Integer方法：digits()可將數字直接切割一組Integer陣列
+	# 	# Array方法：sum()可直接將Integer陣列中所有元素相加
+	# 	n = n.digits.sum	
+	# end
+
+	# return n
+
+  # --- 其他解法 2-1 ---
+	# if n >= 10
+	# 	number_root(n.digits.sum)	# recursive 遞迴
+	# else
+	# 	return n
+	# end
+
+  # --- 其他解法 2-2 ---
+	n >= 10 ? number_root(n.digits.sum) : n
 
 end
 
@@ -46,19 +65,19 @@ puts number_root(493193)  # 印出 2
 # 所以會得到 [1, 2, 3, 1, 2]
 
 def remove_extra_number(list, n)
-    # 實作內容請寫在這裡
-    ary_result = []
+	# 實作內容請寫在這裡
+	ary_result = []
 
-    for i in 0..list.length - 1 do
-        # Array方法：
-        # include?() 得知陣列中是否包含該物件
-        # count() 得知陣列中物件個數
-        if !ary_result.include?(list[i]) || ary_result.count(list[i]) < n
-            ary_result << list[i]
-        end
-    end
+	for i in 0..list.length - 1 do
+			# Array方法：
+			# include?() 得知陣列中是否包含該物件
+			# count() 得知陣列中物件個數
+			if !ary_result.include?(list[i]) || ary_result.count(list[i]) < n
+					ary_result << list[i]
+			end
+	end
 
-    return ary_result
+	return ary_result
 end
 
 p remove_extra_number([1, 1, 1, 1], 1)           # 印出 [1]
