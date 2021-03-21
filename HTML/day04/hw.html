@@ -28,9 +28,9 @@
             position: sticky;
             top: 0;
             left: 0;
+            z-index: 40;
         }
         .header .logo{
-            width: 200px;
             display: flex;
             margin: 15px;
         }
@@ -39,8 +39,7 @@
             height: 24px;
         }
         .header .logo h1{
-            width: 150px;
-            font-size: 1rem;
+            font-size: 1.125rem;
             margin-left: 10px;
         }
         .header nav{
@@ -51,52 +50,192 @@
         .header nav .nav-item{
             margin-left: 10px;
             margin-right: 10px;
+            font-size: inherit;
+            font-weight: inherit;
         }
         .header nav .nav-item:hover{
             border-bottom: 3px solid palevioletred;
         }
 
         /* Container Style */
+        section{
+            display: block;
+        }
         .container{
             width: 100%;
-            height: 1000px;
+            /* height: 1000px; */
             /* background-color: #aaf; */
         }
         .banner{
             width: 100%;
-            height: 800px;
-            background-image: url(https://picsum.photos/1920/1080/);
+            background-image: url(https://picsum.photos/1920/800/);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+            position: relative;
+            padding-top: 5rem;
+            clip-path: polygon(0px 0px, 100% 0px,100% 77%, 35% 100%, 0px 77%);
+        }
+        .banner-cover{
+            clip-path: polygon(0px 0px 100% 0px,100% 77%, 35% 100%, 0px 77%);
         }
         .banner-title{
-            margin: auto;
+            color: #FFF;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0.5rem;
+            padding-top: 5rem;
+            padding-bottom: 12rem;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            max-width: 1024px;
+        }
+        .banner-title h1{
+            font-size: 3rem;
+            line-height: 1;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        .banner-title h3{
+            margin-bottom: 4rem;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
+
+        .banner-button{
+            text-align: center;
+            color: #FFF;
+            background-color: rgb(255,19,62);
+            font-size: 1.125rem;
+            padding: 0.75rem 2rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            line-height: 1.75rem;
+        }
+
+        .features{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5rem;
+            margin-bottom: 12rem;
+            width: 100%;
+        }
+        .features h2{
+            text-align: center;
+            width: 100%;
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .features h2::after{
+            content: "";
+            display: block;
+            width: 3px;
+            height: 0;
+            bottom: 0px;
+            border-bottom-width: 2px;
+            border-color: rgb(255,19,62);
+        }
+        .section-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 4rem;
+        }
+        .section-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+        .section-item h3{
+            font-weight: 700;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         /* Footer Style */
         .footer{
             width: 100%;
-            height: 500px;
-            background-color: rgba(24,30,45,1);
+            /* height: 500px; */
+            background-color: rgb(41,48,62);
+            position: relative;
+            padding-top: 4rem;
+            padding-bottom: 2rem;
         }
-        
+        .footer-content{
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 4rem;
+            padding-bottom: 2rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            margin-left: 5rem;
+            margin-right: 5rem;
+        }
+        .footer-info{
+            width: 40%;
+        }
+        .info{
+            padding-top: 1rem;
+            padding-bottom: 2.5rem;
+            color: white;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-style: normal;
+        }
+        .info h2{
+            font-size: inherit;
+            line-height: inherit;
+            font-style: inherit;
+        }
+        .footer-sitemap{
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+        }
+        .sitemap-item{
+            width: 33.3333%;
+            padding-bottom: 4rem;
+            color: white;
+        }
+        .sitemap-item h3{
+            font-weight: 700;
+            padding-bottom: 0.75rem;
+        }
+        .sitemap-item ul > li{
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            margin: 0.5rem 0rem;
+        }
         .footer-sociallink{
+            width: 100%;
             padding: 100px;
-            
-            /* justify-content: space-between; */
+            text-align: center;
+            margin-bottom: 1.25rem;
         }
         .footer-sociallink a{
             color: rgba(160,166,177,1);
         }
         .footer-sociallink ul > li{
             display: inline-flex;
-            margin: 0px 10px;
-            margin-inline-start: ;
+            padding: 0 1.25rem;
             /* justify-content: space-between; */
         }
         .footer-copyright{
-            height: 50px;
             text-align: center;
             color: rgba(160,166,177,1);
-            /* background-color: #fff; */
+            background-color: rgba(24,30,45,1);
+            width: 100%;
+            padding: 1rem 0rem;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -104,72 +243,139 @@
     <div class="header">
         <div class="logo">
             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgODEuMTMgMzcuMyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzUxMik7fS5jbHMtMntmaWxsOiMxYTFhMWE7fS5jbHMtM3tmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU4MSk7fS5jbHMtNHtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU3Myk7fS5jbHMtNXtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU1OSk7fS5jbHMtNntmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzUxMi0yKTt9PC9zdHlsZT48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81MTIiIHgxPSIyOC42NCIgeTE9Ii0xLjA4IiB4Mj0iNTQuNiIgeTI9IjI0Ljg4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTk1NzUwIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjA5NTgwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81ODEiIHgxPSIyMy45NCIgeTE9IjguNzMiIHgyPSI0NS43MyIgeTI9IjMwLjUyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTczMzJlIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWQ3YzZmIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81NzMiIHgxPSIyOS4zMSIgeTE9IjE0LjQxIiB4Mj0iMjkuMzEiIHkyPSItMC44IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZjE5ZDk2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWI3MDYzIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81NTkiIHgxPSI1MS44NCIgeTE9IjEzLjg2IiB4Mj0iNTEuODQiIHkyPSIwLjY1IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwLjAxIiBzdG9wLWNvbG9yPSIjZjZjMGJkIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWY5MThiIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81MTItMiIgeDE9IjQwLjgyIiB5MT0iMTQuMzQiIHgyPSI1Mi41MyIgeTI9IjI2LjA1IiB4bGluazpocmVmPSIj5pyq5ZG95ZCN5ry45bGkXzUxMiIvPjwvZGVmcz48ZyBpZD0iTE9HT1/oqK3oqIgiIGRhdGEtbmFtZT0iTE9HTyDoqK3oqIgiPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI1Ni43IDAuNTQgNDAuNTcgMC41NCAyNC40NCAwLjU0IDE4LjA1IDEzLjQ0IDQwLjU3IDM3LjI4IDYzLjExIDEzLjQ0IDU2LjcgMC41NCIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTc2LjMzLDExLjQ3VjYuNjRhNi40NSw2LjQ1LDAsMCwwLTEuODYtNC44QTYuODIsNi44MiwwLDAsMCw2OS41OCwwSDY1LjE5VjUuMThINjlhMiwyLDAsMCwxLDIuMTYsMi4xNHY1LjMxYTUuMTksNS4xOSwwLDAsMCwxLjQ2LDMuODgsNy41OSw3LjU5LDAsMCwwLDMuOSwxLjgsNy41MSw3LjUxLDAsMCwwLTMuOSwxLjc5QTUuMjEsNS4yMSwwLDAsMCw3MS4xNywyNFYyOS4zQTIsMiwwLDAsMSw2OSwzMS40M0g2NS4xOXY1LjE2aDQuMzlhNi44Miw2LjgyLDAsMCwwLDQuODktMS44MkE2LjQ1LDYuNDUsMCwwLDAsNzYuMzMsMzBWMjUuMTRjMC0yLjY2LDEuNDItNC4yLDQuNDMtNC4yVjE1LjY3Qzc3Ljc1LDE1LjY3LDc2LjMzLDE0LjE0LDc2LjMzLDExLjQ3WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTEwLDEyLjYzVjcuMzJhMiwyLDAsMCwxLDIuMTYtMi4xNGgzLjgyVjBIMTEuNTZhNi44Myw2LjgzLDAsMCwwLTQuOSwxLjgyLDYuNDUsNi40NSwwLDAsMC0xLjg1LDQuOHY0LjgzYzAsMi42Ny0xLjQzLDQuMi00LjQ0LDQuMnY1LjI3YzMsMCw0LjQ0LDEuNTQsNC40NCw0LjJWMzBhNi40NSw2LjQ1LDAsMCwwLDEuODUsNC44LDYuODMsNi44MywwLDAsMCw0LjksMS44Mmg0LjM4VjMxLjQzSDEyLjEyQTIsMiwwLDAsMSwxMCwyOS4zVjI0QTUuMjEsNS4yMSwwLDAsMCw4LjUsMjAuMWE3LjUxLDcuNTEsMCwwLDAtMy45LTEuNzksNy41OSw3LjU5LDAsMCwwLDMuOS0xLjhBNS4xOSw1LjE5LDAsMCwwLDEwLDEyLjYzWiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIxOC4wNSAxMy40NCA0MC41NyAzNy4yOCA0MC41NyAxMy40NCAxOC4wNSAxMy40NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNCIgcG9pbnRzPSI0MC41NyAwLjU0IDI0LjQ0IDAuNTQgMTguMDUgMTMuNDQgNDAuNTcgMTMuNDQgNDAuNTcgMC41NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNSIgcG9pbnRzPSI2My4xMSAxMy40NCA1Ni43IDAuNTQgNDAuNTcgMC41NCA0MC41NyAxMy40NCA2My4xMSAxMy40NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNiIgcG9pbnRzPSI0MC41NyAxMy40NCA0MC41NyAzNy4yOCA2My4xMSAxMy40NCA0MC41NyAxMy40NCIvPjwvZz48L3N2Zz4=">
-            <h1>五倍紅寶石</h1>
+            <h1>五倍紅寶石．專業程式教育機構</h1>
         </div>
         <nav>
-            <div class="nav-item"><strong>全方位培訓營</strong></div>
-            <div class="nav-item"><strong>ASTRO Camp</strong></div>
-            <div class="nav-item"><strong>線上課程</strong></div>
-            <div class="nav-item"><strong>短期課程</strong></div>
-            <div class="nav-item"><strong>專欄文章</strong></div>
-            <div class="nav-item"><strong>最新消息</strong></div>
+            <h2 class="nav-item">全方位培訓營</h2>
+            <h2 class="nav-item">ASTRO Camp</h2>
+            <h2 class="nav-item">線上課程</h2>
+            <h2 class="nav-item">短期課程</h2>
+            <h2 class="nav-item">專欄文章</h2>
+            <h2 class="nav-item">最新消息</h2>
         </nav>
     </div>
 
     <div class="container">
-        <section class="banner">
+        <section class="banner banner-cover">
             <div class="banner-title">
                 <h1>五倍學習，突破你的可能性</h1>
-                <P>掌握實戰經驗，從初心素人到業界接軌，讓專業師資為你重新定義程式教育。</P>
+                <h3>掌握實戰經驗，從初心素人到業界接軌，讓專業師資為你重新定義程式教育。</h3>
+                <a class="banner-button">立即選課</a>
             </div>
+        </section>
+        <section class="features">
+            <h2>不只停留在教你釣魚，更引領你乘風破浪</h2>
+            <h2>我們不藏私的教學，讓所有人都能發揮超越五倍的價值。</h2>
+            <div class="section-list">
+                <div class="section-item">
+                    <img src="https://picsum.photos/230/175/" alt="">
+                    <h3>鍛鍊實力，主導學習</h3>
+                    <p>搭配最新技術版本，掌握業界脈動，</p>
+                    <p>與需求緊密結合，鍛鍊程式實力。</p>
+                </div>
+                <div class="section-item">
+                    <img src="https://picsum.photos/230/175/" alt="">
+                    <h3>完整規劃，絕不漏接</h3>
+                    <p>線上補課、線下討論與社群活動，</p>
+                    <p>確保學員擁有充份且多元的學習資源和支持系統。</p>
+                </div>
+                <div class="section-item">
+                    <img src="https://picsum.photos/230/175/" alt="">
+                    <h3>挑戰困境，突破職涯</h3>
+                    <p>無論新手塊領域轉職，或在職工程師深度進修，</p>
+                    <p>讓五倍為你解構學習，突破困境。</p>
+                </div>
+            </div>
+            
         </section>
     </div>
 
     <div class="footer">
-        <section class="footer-info">
-
+        <section class="footer-content">
+            <section class="footer-info">
+                <picture>
+                    <img src="https://6055d391c8ec4e000720344a--5xtraining.netlify.app/_next/static/images/inverted_logo-dde38e95b20e76407a7ab3e7db2e1c64.svg" alt="">
+                </picture>
+                <div class="info">
+                    <h2>電話 | (02) 2331-5247</h2>
+                    <h2>信箱 | course@5xcampus.com</h2>
+                    <h2>地址 | 10046 台北市中正區衡陽路 7 號 5 樓</h2>
+                </div>
+            </section>
+            <section class="footer-sitemap">
+                <div class="sitemap-item">
+                    <h3>專業課程</h3>
+                    <ul>
+                        <li>全方位培訓營</li>
+                        <li>ASTRO Camp</li>
+                        <li>線上課程</li>
+                        <li>短期課程</li>
+                    </ul>
+                </div>
+                <div class="sitemap-item">
+                    <h3>關於我們</h3>
+                    <ul>
+                        <li>關於五倍紅寶石</li>
+                        <li>聯絡我們</li>
+                    </ul>
+                </div>
+                <div class="sitemap-item">
+                    <h3>部落格</h3>
+                    <ul>
+                        <li>專欄文章</li>
+                        <li>最新消息</li>
+                    </ul>
+                </div>
+                <div class="sitemap-item">
+                    <h3>幫助與政策</h3>
+                    <ul>
+                        <li>常見問題</li>
+                        <li>隱私權政策</li>
+                        <li>服務條款</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="footer-sociallink">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-youtube fa-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-medium-m fa-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-line fa-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+    
+            </section>
+            
         </section>
-        <section class="footer-sitemap">
-
-        </section>
-        <section class="footer-sociallink">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fab fa-facebook-square fa-3x"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fab fa-youtube fa-3x"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fab fa-github fa-3x"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fab fa-medium-m fa-3x"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fab fa-line fa-3x"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fab fa-twitter fa-3x"></i>
-                    </a>
-                </li>
-            </ul>
-
-        </section>
-        <div class="footer-copyright">
-            <span>© 2014 - 2021 五倍紅寶石程式資訊教育股份有限公司 (5xRuby Training Group CO., LTD) | 台北市短期補習班立案 第 7594 號</span>
-        </div>
+        
     </div>
+    <section class="footer-copyright">
+        <span>© 2014 - 2021 五倍紅寶石程式資訊教育股份有限公司 (5xRuby Training Group CO., LTD) | 台北市短期補習班立案 第 7594 號</span>
+    </section>
 </body>
 </html>
