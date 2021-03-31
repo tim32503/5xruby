@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap{
+            width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 10px solid red;
+        }
+        .item{
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            font-size: 50px;
+        }
+        .item1{
+            background-color: #faa;
+            /* flex-shrink: 2; */
+        }
+        .item2{
+            background-color: #afa;
+            /* flex-shrink: 1; */
+        }
+        .item3{
+            background-color: #aaf;
+            /* flex-shrink: 1; */
+        }
+        .item4{
+            background-color: #ffa;
+            order: -1;
+            /* flex-shrink: 1; */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+    </div>
+</body>
+</html>

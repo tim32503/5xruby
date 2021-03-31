@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 1.5rem;
+    line-height: 1.5rem;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 40;
+}
+header a{
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header h1{
+    font-size: 1.125rem;
+    padding-left: 0.25rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+.nav-logo{
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    /* vertical-align: middle; */
+    align-items: center;
+}
+header nav{
+    margin-left: auto;
+}
+header nav ul > li{
+    display: inline-block;
+    margin: 0 1rem; 
+    padding: 1.25rem 0;
+}
+
+.body{
+    width: 100%;
+    background-image: url(https://6059aa4360104ab2eec98358--5xtraining.netlify.app/_next/static/images/banner-home-aca80ad097b4d77ffa3b82879b5d14a8.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-color: #ccc;
+    position: relative;
+    padding-top: 5rem;
+}
+.cover-title{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 12rem;;
+}
+.cover-title p{
+    margin-bottom: 4rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+.cover-btn{
+    background-color: rgb(255,19,62);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-align: center;
+    padding: 0.75rem 2rem;
+    border-radius: 0.25rem;
+    color: #FFF;
+    font-weight: normal;
+}
+
+@media (min-width: 768px){
+    .nav-caption{
+        display: none;
+    }
+    .cover-title{
+        padding-top: 1.25rem;
+        padding-bottom: 10rem;;
+    }
+}
+@media (min-width: 1024px){
+    .nav-caption{
+        display: inline;
+    }
+    .content{
+        max-width: 1024px;
+        margin: auto;
+    }
+    .cover-title{
+        padding-bottom: 12rem;
+    }
+}
+@media (min-width: 1280px){
+    .nav-caption{
+        display: inline;
+    }
+}

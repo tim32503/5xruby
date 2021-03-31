@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav > ul{
+            display: flex;
+        }
+        ul > li{
+            width: 150px;
+            word-wrap: break-word;
+        }
+        nav > ul ul{
+            display: none;
+            position: absolute;
+        }
+        nav > ul > li:hover .sub1{
+            display: block;
+        }
+        nav > ul > li > ul > li{
+            position: relative;
+        }
+        nav > ul > li > ul > li .sub2{
+            position: absolute;
+            right: -150px;
+            top: 0px;
+        }
+        nav > ul > li > ul > li:hover .sub2{
+            display: block;
+        }
+        nav a{
+            display: block;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color: teal;
+        }
+        nav a + a{
+            text-align: center;
+        }
+        nav > ul ul{
+            box-shadow: 3px 3px 3px 0px #666;
+        }
+        nav > ul ul > li > a{
+            background-color: #fff;
+            border-top: 2px solid teal;
+            border-left: 2px solid teal;
+            border-right: 2px solid teal;
+            color: teal;
+        }
+        nav > ul ul > li:last-child > a{
+            border-bottom: 2px solid teal;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Link</a>
+            </li>
+            <li>
+                <a href="#">Link</a>
+                <ul class="sub1">
+                    <li>
+                        <a href="#">Sub1Sub1Sub1Sub1</a>
+                        <ul class="sub2">
+                            <li><a href="#">Sub2</a></li>
+                            <li><a href="#">Sub2Sub2Sub2</a></li>
+                            <li><a href="#">Sub2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Sub1</a>
+                    </li>
+                    <li>
+                        <a href="#">Sub1</a>
+                        <ul class="sub2">
+                            <li><a href="#">Sub2</a></li>
+                            <li><a href="#">Sub2</a></li>
+                            <li><a href="#">Sub2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Sub1</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Link</a>
+                <ul class="sub1">
+                    <li>
+                        <a href="#">Sub1</a>
+                        <ul class="sub2">
+                            <li><a href="#">Sub2</a></li>
+                            <li><a href="#">Sub2</a></li>
+                            <li><a href="#">Sub2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Sub1</a>
+                        <ul class="sub2">
+                            <li><a href="#">Sub2</a></li>
+                            <li><a href="#">Sub2</a></li>
+                            <li><a href="#">Sub2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Sub1</a>
+                        <ul class="sub2">
+                            <li><a href="#">Sub2</a></li>
+                            <li><a href="#">Sub2</a></li>
+                            <li><a href="#">Sub2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Sub1</a>
+                        <ul class="sub2">
+                            <li><a href="#">Sub2</a></li>
+                            <li><a href="#">Sub2</a></li>
+                            <li><a href="#">Sub2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Link</a>
+            </li>
+            <li>
+                <a href="#">Link</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .canvas{
+        width: 0px;
+        height: 0px;
+        border-bottom: 50px solid #aaf;
+        border-left: 50px solid #aaf;
+        border-right: 50px solid #aaf;
+    }
+    .canvas2{
+        width: 0px;
+        height: 0px;
+        border-top: 10px solid #ccc;
+        border-left: 10px solid transparent;;
+    }
+    .canvas3{
+        width: 100px;
+        height: 100px;
+        background-color: #ccc;
+    }
+    .canvas3::before{
+        content: '';
+        border-top: 10px solid #666;
+        border-left: 10px solid transparent;
+        position: relative;
+        top: 40px;
+        right: 10px;
+    }
+    .canvas3::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-bottom: 50px solid #aaf;
+        border-left: 50px solid #aaf;
+        border-right: 50px solid #aaf;
+    }
+</style>
+<body>
+    <div class="canvas"></div>
+    <div class="canvas2"></div>
+
+    <div class="canvas3"></div>
+</body>
+</html>

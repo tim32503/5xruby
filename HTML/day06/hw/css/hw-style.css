@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+}
+section{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+.item{
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
+.item:nth-child(odd) .color-block{
+    background-color: #eee;
+    width: 439px;
+    height: 290px;
+    position: relative;
+    top: 30rem;
+    left: 25rem;
+}
+.item:nth-child(even) .color-block{
+    background-color: #eee;
+    width: 518px;
+    height: 413px;
+    position: relative;
+    top: 40rem;
+    left: 5rem;
+}
+.title{
+    width: 355px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    z-index: 40;
+}
+.item:nth-child(odd) .title{
+    left: -10rem;
+    top: 9.5em;
+}
+.item:nth-child(even) .title{
+    right: -5rem;
+    top: 9.5em;
+    margin-left: auto;
+}
+h1{
+    display: flex;
+    background-color: #b30000;
+    align-items: center;
+    font-size: 3rem;
+}
+h1 span{
+    display: block;
+    transform: rotate(90deg);
+    font-size: 6rem;
+}
+.title-info{
+    line-height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.title-info h2{
+    padding: 10px 10px 5px 10px;
+}
+.title-info p{
+    padding: 10px 10px 30px 10px;
+}
+picture > span{
+    width: 57px;
+    height: 36px;
+    display: block;
+    position: relative;
+    
+    z-index: 60;
+    background-color: #b30000;
+    background-image: url(https://www.toyota.com.tw/asset/img/tech_tnga/video-icon.png?73425069);
+}
+.item:nth-child(odd) picture > span{
+    bottom: 20%;
+    left: 95%;
+}
+.item:nth-child(even) picture > span{
+    bottom: 20%;
+    left: -5%;
+}
+.item:nth-child(odd) picture{
+    position: relative;
+    align-self: flex-end;
+    left: 5rem;
+}
+.item:nth-child(even) picture{
+    position: relative;
+    align-self: flex-start;
+    right: 8rem;
+}
+.item:nth-child(odd) .content{
+    width: 662px;
+    background-color: #eee;
+    padding: 10px 10px 20px 10px;
+    position: relative;
+    left: -5rem;
+    top: -2rem;
+}
+.item:nth-child(even) .content{
+    width: 662px;
+    background-color: #eee;
+    padding: 10px 10px 20px 10px;
+    position: relative;
+    right: -5rem;
+    top: -2rem;
+}
+.content h2{
+    color: #b30000;
+    position: relative;
+    display: flex;
+}
+.content h2::after{
+    content: "";
+    width: 63%;
+    height: 2px;
+    top: 50%;
+    right: 0;
+    flex-grow: 1;
+    background-color: #b30000;
+    position: absolute;
+}
+.content ul > li{
+    display: flex;
+    flex-direction: column;
+}
+.content ul > li h5{
+    background-color: #000;
+    color: #fff;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    border-radius: 5%;
+}
+ul > li > ul > li{
+    position: relative;
+    margin-left: 20px;
+}
+ul > li > ul > li::before{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #b30000;
+    position: absolute;
+    top: 9px;
+    left: -10px;
+}
