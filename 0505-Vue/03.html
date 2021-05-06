@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="demo">
+    <label v-for="n in names">
+      <input type="checkbox"
+              :value="n"
+              v-model="checkedNames">
+      {{ n }}
+    </label>
+
+    <div>
+      CheckedNames: {{ checkedNames }}
+    </div>
+    
+  </div>
+  
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    const { ref, createApp } = Vue;
+    
+
+    createApp({
+      setup() {
+        const names = ['Jack', 'John', 'Mike', 'Mary'];
+        const checkedNames = ref([])
+
+        return { names, checkedNames }
+      }
+    }).mount('#demo')
+  </script>
+</body>
+</html>

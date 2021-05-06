@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="price">
+    <h1>{{ calPrice(price) }}</h1>
+    <input type="text" v-model="price">
+  </div>
+  <div id="text">
+    <h1>{{ concat() }}</h1>
+    <input type="text" v-model="text">
+  </div>
+
+  <!-- 載入 Vue 3.0 -->
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    const { ref, createApp } = Vue;
+
+    createApp({
+      setup() {
+        const price = ref(100);
+        const calPrice = price => (price >= 1000) ? price - 100 : price;
+
+        return {
+          price, calPrice
+        }
+      }
+      
+    }).mount('#price')
+
+    createApp({
+      setup() {
+        const text = ref('');
+        const message = '123';
+        const concat = () => {
+          return message + text.value;
+        }
+
+        return {
+          text, message, concat
+        }
+      }
+    }).mount('#text')
+
+    // ES6 Proxy
+
+  </script>
+</body>
+</html>
